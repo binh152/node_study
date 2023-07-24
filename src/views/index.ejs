@@ -5,13 +5,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Node js Basic</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <h1>Hello</h1>
-    <img src="/image/tải xuống (1).png" alt="">
+    <nav>
+        <div class="heading">
+            <h4>Navigation Bar</h4>
+        </div>
+        <ul class="nav-links">
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div>
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let i=0; i < dataTest.length; i++) { %>
+                        <tr>
+                            <td>
+                                <%= dataTest[i].id %>
+                            </td>
+                            <td>
+                                <%= dataTest[i].name %>
+                            </td>
+                            <td>
+                                <%= dataTest[i].age %>
+                            </td>
+                            <td>
+                                <a class="btn" href="/detail/<%= dataTest[i].id %>">Details</a>
+                                <button class="btn" type="button">Delete</button>
+                                <button class="btn" type="button">Edit</button>
+                            </td>
+
+                        </tr>
+                        <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
 </body>
 
 </html>

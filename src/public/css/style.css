@@ -1,3 +1,180 @@
-h1 {
-  color: brown;
+* {
+  margin: 0px;
+
+  padding: 0px;
+
+  box-sizing: border-box;
+}
+
+.body-text {
+  display: flex;
+
+  font-family: "Montserrat", sans-serif;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-top: 250px;
+}
+
+nav {
+  display: flex;
+
+  justify-content: space-around;
+
+  align-items: center;
+
+  min-height: 8vh;
+
+  background-color: teal;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+.heading {
+  color: white;
+
+  text-transform: uppercase;
+
+  letter-spacing: 5px;
+
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+
+  justify-content: space-around;
+
+  width: 30%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+
+  text-decoration: none;
+
+  letter-spacing: 3px;
+
+  font-weight: bold;
+
+  font-size: 14px;
+
+  padding: 14px 16px;
+}
+
+.nav-links a:hover:not(.active) {
+  background-color: lightseagreen;
+}
+
+.nav-links li a.active {
+  background-color: #4caf50;
+}
+
+/* table */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: linear-gradient(45deg, #49a09d, #c287eb);
+  font-family: sans-serif;
+  font-weight: 100;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 21px;
+}
+table {
+  width: 60%;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+th {
+  text-align: left;
+}
+thead th {
+  background-color: #55608f;
+}
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+tbody td {
+  position: relative;
+}
+tbody td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+tbody td:last-child,
+thead th:last-child {
+  display: flex;
+  justify-content: center;
+}
+tbody td .btn {
+  margin-right: 10px;
+}
+
+/* button */
+.btn {
+  background: #1aab8a;
+  color: #fff;
+  border: none;
+  position: relative;
+  height: 36px;
+  font-size: 0.8em;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+}
+.btn:hover {
+  background: #fff;
+  color: #1aab8a;
+}
+.btn:before,
+.btn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #1aab8a;
+  transition: 400ms ease all;
+}
+.btn:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+.btn:hover:before,
+.btn:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
 }

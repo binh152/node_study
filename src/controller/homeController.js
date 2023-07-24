@@ -1,6 +1,18 @@
-let getHomePage = (req, res) => {
+import connection from "../config/connectDB";
+
+let getHomePage = async (req, res) => {
   // logic
-  return res.render("index.ejs");
+  const [rows, fields] = await connection.execute("SELECT * FROM `test`");
+  return res.render("index.ejs", { dataTest: rows });
 };
 
-module.exports = { getHomePage };
+let getDetailPage = async (req, res) => {
+  let id = req.params.id;
+  let [user] = await connection.execute("SELECT * FROM `test` where id= ? ", [
+    id,
+  ]);
+  console.log(user);
+  return res.send(JSON.stringify(user));
+};
+
+module.exports = { getHomePage, getDetailPage };
