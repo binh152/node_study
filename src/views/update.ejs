@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update User</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+    <div class="formbg-outer" style="padding-top: 20px ;">
+        <div class="formbg">
+            <div class="formbg-inner padding-horizontal--48">
+                <!-- <span class="padding-bottom--15">Sign in to your account</span> -->
+                <form action="/update-user" method="POST">
+                    <input type="text" hidden name="id" value="<%= dataTest.id %>">
+                    <div class="field padding-bottom--24">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" value="<%= dataTest.name %>">
+                    </div>
+                    <div class="field padding-bottom--24">
+                        <div class="grid--50-50">
+                            <label for="age">Age</label>
+                        </div>
+                        <input type="text" name="age" value="<%= dataTest.age %>">
+                    </div>
+                    <div class="field padding-bottom--24 btn-submit">
+                        <button class="btn" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

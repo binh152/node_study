@@ -46,8 +46,13 @@
                             </td>
                             <td>
                                 <a class="btn" href="/detail/<%= dataTest[i].id %>">Details</a>
-                                <button class="btn" type="button">Delete</button>
-                                <button class="btn" type="button">Edit</button>
+                                <form action="/edit-user/<%= dataTest[i].id %>" method="GET">
+                                    <button class="btn" type="submit">Edit</button>
+                                </form>
+                                <form action="/delete-user" method="POST">
+                                    <input type="text" hidden value="<%= dataTest[i].id %>" name="userId">
+                                    <button class="btn" type="submit">Delete</button>
+                                </form>
                             </td>
 
                         </tr>
